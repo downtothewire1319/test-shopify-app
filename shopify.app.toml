@@ -1,8 +1,6 @@
-# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
-
 client_id = "d5c2c1a8c17dd6991cde68226e9a0c52"
 name = "test4"
-application_url = "https://example.com"
+application_url = "https://test-shopify-app-pi.vercel.app"
 embedded = true
 
 [build]
@@ -21,8 +19,9 @@ api_version = "2026-04"
   uri = "/webhooks/app/scopes_update"
 
 [access_scopes]
-# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "read_orders,read_customers"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://test-shopify-app-pi.vercel.app/auth/callback"
+]
